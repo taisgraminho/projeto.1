@@ -1,0 +1,84 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h> 
+#include <math.h>
+
+void main(void) {
+    int option;
+    float n1, n2;
+    float expo,adi, mult, sub, divi;
+
+    setlocale(LC_ALL, "Portuguese"); 
+    
+    printf("Operações Matemáticas Dísponiveis:\n");
+    printf(" 1-Divisão\n");
+    printf(" 2-Multiplicação\n");
+    printf(" 3-Adição\n");
+    printf(" 4-Subtração\n");
+    printf(" 5-Exponenciação\n");
+    printf(" 6-Sair\n");
+    
+    printf("\nEscolha a opção desejada: ");
+    scanf("%d", &option);
+    
+    
+    if (option <= 6, option >0){
+        printf("\n");
+        switch(option){
+            case 1:
+                printf("Digite o valor do dividendo: ");
+                scanf("%f", &n1);
+                printf("Digite o valor do dividor: ");
+                scanf("%f", &n2);
+        
+                divi = (n1 / n2);
+                printf("o quociente é:%3.f", divi);
+            break;
+          
+            case 2:
+                printf("Digite o valor do multiplicando: ");
+                scanf("%f", &n1);
+                printf("Digite o valor do multiplicador: ");
+                scanf("%f", &n2);
+                mult = (n1 * n2);
+                printf("o produto é: %3.f",mult);
+            break;
+        
+            case 3:
+                printf("Digite o primeiro valor: ");
+                scanf("%f", &n1);
+                printf("Digite o segundo valor: ");
+                scanf("%f", &n2);
+                adi = (n1 + n2);
+                printf("O total é: %3.f",adi);
+            break;
+        
+            case 4:
+                printf("Digite o valor do minuendo: ");
+                scanf("%f", &n1);
+                printf("Digite o valor do subtraendo: ");
+                scanf("%f", &n2);
+                sub = (n1 - n2);
+                printf("A diferença é: %3.f",sub);
+            break;
+        
+            case 5:
+                printf("Digite o valor da base: ");
+                scanf("%f", &n1);
+                printf("Digite o valor do expoente: ");
+                scanf("%f", &n2);
+                expo = (pow(n1,n2)); //n1 = base; n2 = expoente
+                printf("A potência é: %1.f",expo);
+            break;
+        
+            case 6:
+                printf("Encerrando o programa...");
+            break;
+             }
+    }
+    else{
+            printf("\nOpção inválida!!");
+    }
+    
+}
